@@ -1,16 +1,17 @@
 <?php
+declare(strict_types=1);
 
-function calculateCircleArea($radius)
+function calculateCircleArea(int|float $radius): int|float
 {
     return pi() * pow($radius, 2);
 }
 
-$radius = 5;
+$radius = 5.55;
 $area = calculateCircleArea($radius);
 echo "The area of a circle with radius $radius is $area" . PHP_EOL;
 
 
-function powerNumber($num, $powExponent)
+function powerNumber(int|float $num, int $powExponent): int|float
 {
     return pow($num, $powExponent);
 }
@@ -22,12 +23,12 @@ $powNum = powerNumber($num, $powExponent);
 echo "$num raised to the power of $powExponent is $powNum" . PHP_EOL;
 
 
-function returnNewNumber($num, $increment)
+function returnNewNumber(int $num, int $increment): int
 {
     return $num + $increment;
 }
 
-function modifyOriginalNumber(&$num, $increment)
+function modifyOriginalNumber(int &$num, int $increment): int
 {
     $num += $increment;
     return $num;
