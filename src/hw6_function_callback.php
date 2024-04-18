@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-function multiplyAndOptionallyDisplay(int|float $num1, int|float $num2, closure $callback = null): int|string
+function multiplyAndOptionallyDisplay(int|float $num1, int|float $num2, ?closure $callback = null): int|string
 {
     $result = $num1 * $num2;
 
