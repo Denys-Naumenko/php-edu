@@ -21,6 +21,7 @@ $array = [1, 2, 3, 'four', 'five'];
 echo "Array: ";
 print_r($array);
 
+
 $associativeArray = ['name' => 'John', 'age' => 25];
 echo "Associative array: ";
 print_r($associativeArray);
