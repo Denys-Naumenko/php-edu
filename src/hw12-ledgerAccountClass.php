@@ -1,8 +1,5 @@
 <?php
 
-require_once __DIR__ . '/hw11-logger-write.php';
-require_once __DIR__ . '/hw11-logger-read.php';
-
 class LedgerClass
 {
     private string $ledgerAccount;
@@ -10,9 +7,11 @@ class LedgerClass
 
     public function __construct(string $ledgerAccount, int $ledgerBalance = 0)
     {
+        if ($ledgerBalance < 0) {
+            throw new InvalidArgumentException("Account initiated error: Initial balance cannot be negative.");
+        }
         $this->ledgerAccount = $ledgerAccount;
         $this->ledgerBalance = $ledgerBalance;
-        logWrite("Created new account {$ledgerAccount} with balance \${$ledgerBalance}");
     }
 
     public function getLedgerAccount(): string
@@ -25,32 +24,33 @@ class LedgerClass
         return $this->ledgerBalance;
     }
 
-    public function deposit(int $amount): void
+    public function deposit(int $amount): bool
     {
         if ($amount <= 0) {
-            throw new InvalidArgumentException("Deposit amount must be positive");
+            throw new InvalidArgumentException("Deposit Error: Deposit amount must be positive.");
         }
         $this->ledgerBalance += $amount;
-        logWrite("Deposited \${$amount} to account {$this->ledgerAccount}, new balance: \${$this->ledgerBalance}");
+        return true;
     }
 
-    public function withdraw(int $amount): void
+    public function withdraw(int $amount): bool
     {
         if ($amount <= 0) {
-            throw new InvalidArgumentException("Withdrawal amount must be positive");
+            throw new InvalidArgumentException("Withdrawal Error: amount must be positive");
         }
         if ($this->ledgerBalance < $amount) {
-            throw new RuntimeException("Insufficient funds");
+            throw new RuntimeException("Withdrawal Error: Insufficient funds");
         }
         $this->ledgerBalance -= $amount;
-        logWrite("Withdrew \${$amount} from account {$this->ledgerAccount}, new balance: \${$this->ledgerBalance}");
-
+        return true;
     }
 
-    public function getAccountInfo(): void
+    public function getAccountInfo(): array
     {
-        echo "Ledger Account:" . $this->getLedgerAccount() . PHP_EOL;
-        echo "Ledger Balance:" . $this->getLedgerBalance() . PHP_EOL;
+        return [
+            "Ledger Account" => $this->getLedgerAccount(),
+            "Ledger Balance" => $this->getLedgerBalance()
+        ];
     }
 }
 
