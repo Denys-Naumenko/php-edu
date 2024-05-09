@@ -15,7 +15,7 @@ function getUserName(): string
 $userName = getUserName();
 
 try {
-    logWrite($userName, 'info');
+    logWrite($userName);
     echo "Last log entry: " . logRead() . PHP_EOL;
 } catch (InvalidArgumentException $e) {
     echo "Error: " . $e->getMessage() . PHP_EOL;
