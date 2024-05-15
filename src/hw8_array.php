@@ -1,6 +1,6 @@
 <?php
 
-function generateArray(int $length = 5, int $min = 1, int $max = 10): Generator
+function generateArray(int $length = 5, int $min = 1, int $max = 10): array
 {
     $array = [];
     for ($i = 0; $i < $length; $i++) {
