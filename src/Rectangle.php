@@ -3,9 +3,12 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/Figure.php';
+require_once __DIR__ . '/FigureInfo.php';
 
 class Rectangle extends Figure
 {
+    use FigureInfo;
+
     private float $length;
     private float $width;
 
