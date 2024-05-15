@@ -11,8 +11,7 @@ try {
     echo "Rectangle:" . PHP_EOL;
     echo "Length=" . $rectangle->getLength() . PHP_EOL;
     echo "Width=" . $rectangle->getWidth() . PHP_EOL;
-    echo "Area=" . $rectangle->getArea() . PHP_EOL;
-    echo "Perimeter=" . $rectangle->getPerimeter() . PHP_EOL;
+    $rectangle->printInfo();
 } catch (Exception $e) {
     logWrite($e->getMessage(), "error");
     echo "Error: " . $e->getMessage() . PHP_EOL;
@@ -22,8 +21,7 @@ try {
     $circle = new Circle(3);
     echo "Circle:" . PHP_EOL;
     echo "Radius=" . $circle->getRadius() . PHP_EOL;
-    echo "Area=" . $circle->getArea() . PHP_EOL;
-    echo "Perimeter=" . $circle->getPerimeter() . PHP_EOL;
+    $circle->printInfo();
 } catch (Exception $e) {
     logWrite($e->getMessage(), "error");
     echo "Error: " . $e->getMessage() . PHP_EOL;

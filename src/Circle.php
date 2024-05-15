@@ -3,9 +3,12 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/Figure.php';
+require_once __DIR__ . '/FigureInfo.php';
 
 class Circle extends Figure
 {
+    use FigureInfo;
+
     private float $radius;
 
     public function __construct(float $radius)
