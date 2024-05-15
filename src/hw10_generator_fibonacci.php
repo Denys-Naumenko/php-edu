@@ -1,4 +1,5 @@
 <?php
+
 function generateFibonacci(int $limit): Generator
 {
     $current = 0;
@@ -16,5 +17,3 @@ $fibonacciSequence = generateFibonacci(9);
 foreach ($fibonacciSequence as $value) {
     echo $value . PHP_EOL;
 }
-
-?>

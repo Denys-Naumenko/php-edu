@@ -37,6 +37,3 @@ foreach ($myArray as $value) {
 echo "The sum of array elements: $sum" . PHP_EOL;
 echo "The product of array elements: $product" . PHP_EOL;
 echo "The number of fives in the array: $countOfFives" . PHP_EOL;
-
-
-?>

@@ -1,4 +1,5 @@
 <?php
+
 $host = 'db';
 $db = 'mydatabase';
 $user = 'myuser';
@@ -16,4 +17,3 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-?>

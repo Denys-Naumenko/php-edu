@@ -12,5 +12,3 @@ function logRead(): string
     });
     return empty($lines) ? '' : end($lines);
 }
-
-?>

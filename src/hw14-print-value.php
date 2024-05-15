@@ -8,5 +8,3 @@ $printer->print();
 
 $upperCasePrinter = new UpperCasePrinter();
 $upperCasePrinter->print();
-
-?>

@@ -6,7 +6,7 @@ $boolTrue = true;
 $array = array("Volvo", "BMW", "Toyota");
 $stringEmpty = "";
 $stringNotEmpty = "1e100";
-$varNull = NULL;
+$varNull = null;
 
 var_dump($boolTrue == $stringNotEmpty); //TRUE
 var_dump($boolTrue === $stringNotEmpty); //FALSE
@@ -26,5 +26,3 @@ var_dump($array !== $boolTrue); //TRUE
 var_dump((bool)$array !== $boolTrue); //FALSE
 var_dump($float_2 <= $varNull); //FALSE
 var_dump($float_2 <= (float)$varNull); //FALSE
-
-?>

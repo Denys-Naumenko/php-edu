@@ -34,5 +34,3 @@ class Circle extends Figure
         return $this->radius;
     }
 }
-
-?>
