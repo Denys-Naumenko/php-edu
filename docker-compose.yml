@@ -19,7 +19,12 @@ services:
       dockerfile: Dockerfile-php
     container_name: php-fpm_container
     volumes:
-      - ./src:/var/www/html
+      - ./src:/var/www/html/src
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      - ./phpstan.neon:/var/www/html/phpstan.neon
+      - ./.php-cs-fixer.dist.php:/var/www/html/.php-cs-fixer.dist.php
+      - ./phpcs.xml:/var/www/html/phpcs.xml
 
   db:
     image: postgres:latest
