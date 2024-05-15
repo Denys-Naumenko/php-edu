@@ -1,6 +1,5 @@
 FROM php:8.3-fpm
 
-# Встановлення необхідних розширень PHP та утиліт
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     zip \
@@ -8,15 +7,11 @@ RUN apt-get update && apt-get install -y \
     git \
     && docker-php-ext-install pdo_pgsql
 
-# Встановлення Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Налаштування робочої директорії
 WORKDIR /var/www/html
 
-# Копіювання файлів Composer та встановлення залежностей
 COPY composer.json composer.lock ./
 RUN composer install --no-interaction --optimize-autoloader --no-dev
 
-# Копіювання решти коду
 COPY . /var/www/html
