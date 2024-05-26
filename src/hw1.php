@@ -38,4 +38,3 @@ if ($boolTrue) {
 }
 
 echo "Comparison operators: " . ($integerOne == $integerTwo ? "equal" : "not equal") . "\n";
-?>

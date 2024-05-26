@@ -15,5 +15,3 @@ function logWrite(string $message, string $type = 'action'): bool
 
     return true;
 }
-
-?>

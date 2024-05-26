@@ -14,5 +14,3 @@ try {
 } catch (InvalidArgumentException $e) {
     echo "Error: " . $e->getMessage() . PHP_EOL;
 }
-
-?>

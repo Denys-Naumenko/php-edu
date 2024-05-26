@@ -21,5 +21,3 @@ class Employee
         return $this->email;
     }
 }
-
-?>

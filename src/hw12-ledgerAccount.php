@@ -32,6 +32,3 @@ try {
 } catch (Exception $e) {
     logWrite("Error during operation with account {$ledgerAcc1->getLedgerAccount()}. " . $e->getMessage());
 }
-
-
-?>
