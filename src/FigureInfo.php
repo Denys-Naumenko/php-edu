@@ -9,5 +9,3 @@ trait FigureInfo
         echo "Perimeter: " . $this->getPerimeter() . PHP_EOL;
     }
 }
-
-?>

@@ -26,5 +26,3 @@ try {
     logWrite($e->getMessage(), "error");
     echo "Error: " . $e->getMessage() . PHP_EOL;
 }
-
-?>

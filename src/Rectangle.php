@@ -42,6 +42,3 @@ class Rectangle extends Figure
     }
 
 }
-
-
-?>

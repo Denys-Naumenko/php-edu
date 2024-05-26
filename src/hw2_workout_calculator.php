@@ -1,4 +1,5 @@
 <?php
+
 include 'db.php';
 
 function getUserName()
@@ -67,4 +68,3 @@ function main()
 }
 
 main();
-?>

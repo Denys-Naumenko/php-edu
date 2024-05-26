@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 header('Content-Type: application/json');
 
@@ -31,4 +32,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $questions[$randomIndex]['totalQuestions'] = $totalQuestions;
     echo json_encode($questions[$randomIndex]);
 }
-?>
