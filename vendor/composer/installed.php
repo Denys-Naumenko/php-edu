@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8374a3bdc9c0ba6a3930883ac8ea1121a969a317',
+        'reference' => '0b91c3a91a48a434491384c3c1bd37a6fcb6d980',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8374a3bdc9c0ba6a3930883ac8ea1121a969a317',
+            'reference' => '0b91c3a91a48a434491384c3c1bd37a6fcb6d980',
             'dev_requirement' => false,
         ),
         'clue/ndjson-react' => array(
